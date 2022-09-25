@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csl_ext_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_background_white">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/icon_exit_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="22dp"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/do_you_really_want_to_quit"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_exit_cancel"
+            android:layout_width="135dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="21dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/custom_background_blue"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_alert" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_exit_confirm"
+            android:layout_width="135dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/custom_background_grey"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/exit"
+            android:textAllCaps="false"
+            android:textColor="#4F4F4F"
+            android:textSize="@dimen/text18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_alert" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

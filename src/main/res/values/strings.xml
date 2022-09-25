@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">PhotoEditor</string>
+
+    <!-- Splash Fragment -->
+    <string name="name_splash">Editor photo</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="grant_access">Grant access</string>
+    <string name="permission_remind">Allow to access photos, media\n and files on your device?</string>
+    <string name="allow">Allow</string>
+
+    <!-- toolbar label -->
+    <string name="share">Share</string>
+    <string name="editor_photo">Editor Photo</string>
+    <string name="save">Save</string>
+
+    <!-- widget label -->
+    <string name="filter">Filter</string>
+    <string name="draw">Draw</string>
+    <string name="text">Text</string>
+    <string name="sticker">Sticker</string>
+
+    <!-- draw widget label -->
+    <string name="color">Color</string>
+    <string name="size">Size</string>
+    <string name="brush_color">Brush color</string>
+    <string name="brush_size">Brush size</string>
+
+    <!-- text sticker widget label -->
+    <string name="add">Add</string>
+    <string name="font">Font</string>
+    <string name="bg_color">BG Color</string>
+    <string name="add_text">Add Text</string>
+    <string name="text_color">Text Color</string>
+    <string name="background_color">Background Color</string>
+    <string name="text_font_simple">Ag</string>
+
+    <!-- message -->
+    <string name="dont_have_text">Don\'t have text</string>
+    <string name="do_you_really_want_to_quit">Do you really want to quit?</string>
+
+    <!-- exit dialog -->
+    <string name="cancel">Cancel</string>
+    <string name="exit">Exit</string>
+
+    <!-- Toast message -->
+    <string name="remove_all_sticker">Remove sticker</string>
+    <string name="remove_text_sticker">Remove text sticker</string>
+    <string name="save_image_to_your_local_storage">Save image to your local storage</string>
+    <string name="loading">Loading...</string>
+    <string name="settings_dialog_title">Need Permissions</string>
+    <string name="settings_dialog_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="settings_dialog_positive_button">Go to Settings</string>
+    <string name="settings_dialog_negative_button">Cancel</string>
+
+    <string name="text_bg_color">#00FFFFFF</string>
+    <string name="text_font_default">font/Amulish.ttf</string>
+    <string name="some_error">Some error</string>
+
+</resources>

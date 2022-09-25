@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rl_draw"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        tools:context=".ui.main.draw.DrawFragment">
+
+        <RelativeLayout
+            android:id="@+id/draw_bottom_controls"
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:layout_alignParentBottom="true"
+            android:background="#1C1C1C"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_item"
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:layout_above="@id/tools"
+                android:background="#1C1C1C"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                tools:listitem="@layout/item_sticker" />
+
+            <TextView
+                android:id="@+id/btn_draw_color"
+                style="@style/TextViewChooseIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="@string/color"
+                app:drawableTopCompat="@drawable/icon_draw_color" />
+
+            <TextView
+                android:id="@+id/btn_draw_size"
+                style="@style/TextViewChooseIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="100dp"
+                android:text="@string/size"
+                app:drawableTopCompat="@drawable/icon_draw_size" />
+
+            <include
+                android:id="@+id/tools"
+                layout="@layout/bottom_tools" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</layout>

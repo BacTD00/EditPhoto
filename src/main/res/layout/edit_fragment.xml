@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="mainViewModel"
+            type="vn.tapbi.photoeditor.ui.main.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".ui.main.edit.EditFragment">
+
+        <include
+            android:id="@+id/toolbar_edit"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:id="@+id/rl_detail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/widget_wrapper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_edit">
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="16dp"
+                android:visibility="visible">
+
+                <com.filter.base.GPUImageView
+                    android:id="@+id/img_to_filter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <vn.tapbi.photoeditor.feature.drawable.DrawingView
+                    android:id="@+id/img_to_draw"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <com.xiaopo.flying.sticker.StickerView
+                    android:id="@+id/img_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/fragment_edit_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/widget_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#212124"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="4"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/btn_filter"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/filter"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text14sp"
+                app:drawableTopCompat="@drawable/icon_filter" />
+
+            <TextView
+                android:id="@+id/btn_draw"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/draw"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text14sp"
+                app:drawableTopCompat="@drawable/icon_draw" />
+
+            <TextView
+                android:id="@+id/btn_text"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/text"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text14sp"
+                app:drawableTopCompat="@drawable/icon_text" />
+
+            <TextView
+                android:id="@+id/btn_sticker"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:drawablePadding="2dp"
+                android:fontFamily="@font/mulish_regular"
+                android:text="@string/sticker"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text14sp"
+                app:drawableTopCompat="@drawable/icon_sticker" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

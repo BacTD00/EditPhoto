@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/dialog_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".ui.main.text.TextDialogFragment">
+
+        <EditText
+            android:id="@+id/edt_add_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/text_dialog_tools"
+            android:fontFamily="@font/mulish_semi_bold"
+            android:gravity="center"
+            android:hint="@string/add_text"
+            android:inputType="textMultiLine"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="48sp" />
+
+        <include
+            android:id="@+id/text_dialog_tools"
+            layout="@layout/bottom_tools" />
+
+    </RelativeLayout>
+
+</layout>

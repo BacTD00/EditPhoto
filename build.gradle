@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+apply plugin: 'dagger.hilt.android.plugin'
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+    buildToolsVersion versions.buildToolsVersion
+
+    bundle {
+        language {
+            // Specifies that the app bundle should not support
+            // configuration APKs for language resources. These
+            // resources are instead packaged with each base and
+            // dynamic feature APK.
+            enableSplit = false
+        }
+    }
+
+    defaultConfig {
+        applicationId "vn.tapbi.photoeditor"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        flavorDimensions "default"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        renderscriptTargetApi 29
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        dataBinding true
+    }
+    gradle.projectsEvaluated {
+        tasks.withType(JavaCompile) {
+            options.compilerArgs << "-Xmaxerrs" << "500" // or whatever number you want
+        }
+    }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    productFlavors {
+        product {
+            dimension "default"
+        }
+        dev {
+            dimension "default"
+            applicationId = 'vn.tapbi.photoeditor'
+        }
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+/*Core*/
+    implementation libraries.androidAppCopmpat
+    implementation libraries.multidex
+/*UI*/
+    implementation libraries.androidxNavigation
+    implementation libraries.androidUICommon
+    implementation libraries.materialDesign
+    implementation libraries.hilt
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    annotationProcessor libraries.hiltAP
+
+    implementation libraries.glide
+    annotationProcessor libraries.glideAP
+
+
+/*Database ( if use Room) */
+    implementation libraries.room
+    implementation libraries.roomRxjava
+    annotationProcessor libraries.roomAP
+/*Other*/
+    implementation libraries.rxJava
+    implementation libraries.retrofitWithLogger
+    implementation libraries.retrofitRXjavaAdapter
+    implementation libraries.timberLog
+    implementation libraries.eventBus
+
+/*Test*/
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation testLib
+
+    /*Module*/
+    implementation project(path: ':ucrop')
+    implementation project(path: ':jsfilter')
+    implementation project(path: ':sticker')
+
+    //Dexter
+    implementation 'com.karumi:dexter:6.2.3'
+
+    // circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+}

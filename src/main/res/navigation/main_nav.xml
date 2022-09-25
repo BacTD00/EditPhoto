@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_uCropFragment"
+            app:destination="@id/uCropFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uCropFragment"
+        android:name="com.yalantis.ucrop.UCropFragment"
+        tools:layout="@layout/ucrop_fragment_photobox" >
+        <action
+            android:id="@+id/action_uCropFragment_to_editFragment"
+            app:destination="@id/editFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.edit.EditFragment"
+        android:label="EditFragment"
+        tools:layout="@layout/edit_fragment" >
+        <action
+            android:id="@+id/action_editFragment_to_textFragment"
+            app:destination="@id/textFragment" />
+        <action
+            android:id="@+id/action_editFragment_to_drawFragment"
+            app:destination="@id/drawFragment" />
+        <action
+            android:id="@+id/action_editFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_editFragment_to_stickerFragment"
+            app:destination="@id/stickerFragment" />
+        <action
+            android:id="@+id/action_editFragment_to_shareFragment"
+            app:destination="@id/shareFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.filter.FilterFragment"
+        android:label="FilterFragment"
+        tools:layout="@layout/filter_fragment" />
+    <fragment
+        android:id="@+id/stickerFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.sticker.StickerFragment"
+        android:label="StickerFragment"
+        tools:layout="@layout/sticker_fragment" />
+    <fragment
+        android:id="@+id/shareFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.share.ShareFragment"
+        android:label="ShareFragment"
+        tools:layout="@layout/share_fragment" />
+    <fragment
+        android:id="@+id/drawFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.draw.DrawFragment"
+        android:label="DrawFragment"
+        tools:layout="@layout/draw_fragment" />
+    <fragment
+        android:id="@+id/textFragment"
+        android:name="vn.tapbi.photoeditor.ui.main.text.TextFragment"
+        android:label="TextFragment"
+        tools:layout="@layout/text_fragment" />
+</navigation>

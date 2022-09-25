@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1C1C1C"
+        tools:context=".ui.main.draw.DrawColorFragment">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_choose_color"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/ic_all_color"
+            app:layout_constraintBottom_toTopOf="@id/tools"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_draw_color"
+            android:layout_width="0dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="7dp"
+            android:background="#1C1C1C"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/tools"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_choose_color"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_draw_color" />
+
+        <include
+            android:id="@+id/tools"
+            layout="@layout/bottom_tools"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

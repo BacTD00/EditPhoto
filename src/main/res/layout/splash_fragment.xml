@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_gradient"
+        android:orientation="vertical"
+        tools:context=".ui.main.splash.SplashFragment">
+
+        <TextView
+            android:id="@+id/tv_name_slash"
+            style="@style/SplashTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_choose_photo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="183dp"
+            android:drawablePadding="11dp"
+            android:text="@string/name_splash"
+            android:textFontWeight="400"
+            android:textSize="@dimen/text36sp"
+            app:drawableTopCompat="@drawable/icon_splash" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_choose_photo"
+            android:layout_width="251dp"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="145dp"
+            android:background="@drawable/custom_background_white"
+            android:elevation="6dp"
+            android:fontFamily="@font/mulish_semi_bold"
+            android:text="@string/choose_photo"
+            android:textAllCaps="false"
+            android:textColor="#227DF2"
+            android:textFontWeight="600"
+            android:textSize="@dimen/text20sp" />
+
+    </RelativeLayout>
+</layout>

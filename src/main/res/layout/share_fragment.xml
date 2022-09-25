@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".ui.main.share.ShareFragment">
+
+        <include
+            android:id="@+id/toolbar_share"
+            layout="@layout/toolbar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_to_share"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btn_sharing"
+            android:layout_below="@id/toolbar_share"
+            tools:src="@drawable/img_example" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sharing"
+            android:layout_width="254dp"
+            android:layout_height="52dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="52dp"
+            android:background="@drawable/custom_background_blue"
+            android:fontFamily="@font/mulish_regular"
+            android:text="@string/share"
+            android:textAllCaps="false"
+            android:textColor="#FFF"
+            android:textSize="@dimen/text24sp" />
+
+    </RelativeLayout>
+</layout>
